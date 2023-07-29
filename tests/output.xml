@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230726 11:44:59.414" rpa="false" schemaversion="4">
+<suite id="s1" name="Testcase 1" source="/Users/whichy/Desktop/demo-su.robot/tests/testcase_1.robot">
+<test id="s1-t1" name="ตรวจสอบการแสดงข้อมูลหน้าสร้างหัวข้อ &quot;About SU&quot; เมื่อไม่มีการกรอกข้อมูลมาก่อน" line="8">
+<kw name="เปิดบราวเซอร์สำเร็จ" library="kw_testcase_1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230726 11:44:59.494" level="INFO">Opening browser 'chrome' to base url 'https://smartplus-dev.su.ac.th/admin/auth'.</msg>
+<msg timestamp="20230726 11:44:59.496" level="INFO">Executing: /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
+<status status="PASS" starttime="20230726 11:44:59.494" endtime="20230726 11:45:02.304"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230726 11:45:02.305" endtime="20230726 11:45:02.723"/>
+</kw>
+<status status="PASS" starttime="20230726 11:44:59.493" endtime="20230726 11:45:02.723"/>
+</kw>
+<kw name="เข้าสู่ระบบ" library="kw_testcase_1">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${clickLogin}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230726 11:45:02.724" endtime="20230726 11:45:02.751"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=${clickLogin}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230726 11:45:02.751" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/div[2]/div/div/div/div/div/button'.</msg>
+<status status="PASS" starttime="20230726 11:45:02.751" endtime="20230726 11:45:02.801"/>
+</kw>
+<status status="PASS" starttime="20230726 11:45:02.723" endtime="20230726 11:45:02.802"/>
+</kw>
+<kw name="ใส่ยูสเซอร์เนม" library="kw_testcase_1">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${inputUser}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230726 11:45:02.802" endtime="20230726 11:45:07.324"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${inputUser}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230726 11:45:07.325" level="INFO">Typing text 'pawutinan_s@su.ac.th' into text field 'xpath=//*[@id="i0116"]'.</msg>
+<status status="PASS" starttime="20230726 11:45:07.324" endtime="20230726 11:45:07.455"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230726 11:45:08.457" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230726 11:45:07.455" endtime="20230726 11:45:08.457"/>
+</kw>
+<status status="PASS" starttime="20230726 11:45:02.802" endtime="20230726 11:45:08.457"/>
+</kw>
+<kw name="กดต่อไป" library="kw_testcase_1">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=${nextButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230726 11:45:08.460" level="INFO">Clicking button 'xpath=//*[@id="idSIButton9"]'.</msg>
+<status status="PASS" starttime="20230726 11:45:08.459" endtime="20230726 11:45:08.517"/>
+</kw>
+<status status="PASS" starttime="20230726 11:45:08.458" endtime="20230726 11:45:08.517"/>
+</kw>
+<kw name="ใส่พาสเวิร์ด" library="kw_testcase_1">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${inputPassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230726 11:45:08.517" endtime="20230726 11:45:09.442"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath=${inputPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230726 11:45:09.443" level="INFO">Typing password into text field 'xpath=//*[@id="i0118"]'.</msg>
+<msg timestamp="20230726 11:45:09.467" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230726 11:45:09.484" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230726 11:45:09.442" endtime="20230726 11:45:09.484"/>
+</kw>
+<status status="PASS" starttime="20230726 11:45:08.517" endtime="20230726 11:45:09.484"/>
+</kw>
+<kw name="กดsignIn" library="kw_testcase_1">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${signInButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230726 11:45:09.484" endtime="20230726 11:45:09.493"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=${signInButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230726 11:45:09.494" level="INFO">Clicking button 'xpath=//*[@id="idSIButton9"]'.</msg>
+<status status="PASS" starttime="20230726 11:45:09.493" endtime="20230726 11:45:10.096"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230726 11:45:11.098" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230726 11:45:10.097" endtime="20230726 11:45:11.098"/>
+</kw>
+<status status="PASS" starttime="20230726 11:45:09.484" endtime="20230726 11:45:11.098"/>
+</kw>
+<kw name="กดอยู่ต่อไป" library="kw_testcase_1">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${stayAwayButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230726 11:45:11.099" endtime="20230726 11:45:11.121"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=${stayAwayButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230726 11:45:11.121" level="INFO">Clicking button 'xpath=//*[@id="idSIButton9"]'.</msg>
+<status status="PASS" starttime="20230726 11:45:11.121" endtime="20230726 11:45:11.468"/>
+</kw>
+<status status="PASS" starttime="20230726 11:45:11.099" endtime="20230726 11:45:11.468"/>
+</kw>
+<kw name="เลือกเมนู About SU" library="kw_testcase_1">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/section/aside/div/div/div[1]/div[2]/ul/li[6]/span[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230726 11:45:11.468" endtime="20230726 11:45:12.556"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/section/aside/div/div/div[1]/div[2]/ul/li[6]/span[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230726 11:45:12.556" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/section/aside/div/div/div[1]/div[2]/ul/li[6]/span[2]'.</msg>
+<status status="PASS" starttime="20230726 11:45:12.556" endtime="20230726 11:45:12.637"/>
+</kw>
+<status status="PASS" starttime="20230726 11:45:11.468" endtime="20230726 11:45:12.637"/>
+</kw>
+<kw name="เลือก Created button" library="kw_testcase_1">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/section/section/header/div[2]/div/div/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230726 11:45:12.638" endtime="20230726 11:45:12.651"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/section/section/header/div[2]/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230726 11:45:12.652" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/div/section/section/header/div[2]/div/div/button'.</msg>
+<status status="PASS" starttime="20230726 11:45:12.651" endtime="20230726 11:45:12.770"/>
+</kw>
+<status status="PASS" starttime="20230726 11:45:12.637" endtime="20230726 11:45:12.770"/>
+</kw>
+<kw name="Upload image" library="kw_testcase_1">
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>xpath=//*[@id="basic_bannerImg"]</arg>
+<arg>/Users/whichy/Desktop/demo-su.robot/resources/image for upload/Screenshot 2566-07-21 at 17.39.28.png</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230726 11:45:12.771" level="INFO">Sending /Users/whichy/Desktop/demo-su.robot/resources/image for upload/Screenshot 2566-07-21 at 17.39.28.png to browser.</msg>
+<status status="PASS" starttime="20230726 11:45:12.770" endtime="20230726 11:45:12.821"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230726 11:45:17.822" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230726 11:45:12.821" endtime="20230726 11:45:17.822"/>
+</kw>
+<status status="PASS" starttime="20230726 11:45:12.770" endtime="20230726 11:45:17.822"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230726 11:45:17.823" endtime="20230726 11:45:17.918"/>
+</kw>
+<status status="PASS" starttime="20230726 11:44:59.492" endtime="20230726 11:45:17.918"/>
+</test>
+<status status="PASS" starttime="20230726 11:44:59.415" endtime="20230726 11:45:17.919"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcase 1">Testcase 1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
